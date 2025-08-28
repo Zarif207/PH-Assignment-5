@@ -43,6 +43,42 @@ document.getElementById('RailwayBtn').onclick = function (){
 }
 
 
+// coin cost function
+let coins = 100;
+const coinDisplay = document.getElementById("callCoin");
+const callButtons = document.getElementsByClassName("callBtn");
+
+for (let i = 0; i < callButtons.length; i++) {
+  const btn = callButtons[i];
+  const originalClick = btn.onclick;
+
+  btn.onclick = function (){
+    if (coins >= 20) {
+      if (typeof originalClick === "function") {
+        originalClick();
+      }
+      coins -= 20;
+      coinDisplay.innerText = coins;
+    } else {
+      alert("❌ You do not have enough coins! \n You will need at least 20 coins to make call.");
+    }
+  };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  // copy count function
 
 const copyButtons = document.getElementsByClassName("copyBtn"); 
