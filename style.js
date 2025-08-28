@@ -43,6 +43,39 @@ document.getElementById('RailwayBtn').onclick = function (){
 }
 
 
+ // copy count function
+
+const copyButtons = document.getElementsByClassName("copyBtn"); 
+const copyNumberCount = document.getElementById("copyNumber"); 
+
+let num = 0; 
+
+for (let i = 0; i < copyButtons.length; i++) {
+  copyButtons[i].onclick = function(){
+    num++; 
+    copyNumberCount.innerText = num + ' Copy'; 
+    
+    const card = this.closest(".card");
+    const numberText = card.querySelector(".card-number").innerText; 
+    
+    alert("The number has been copied: " + numberText);
+    navigator.clipboard.writeText(numberText).then(function() {
+      console.log("Copied successfully!");
+    }).catch(function(err) {
+      console.log("Failed to copy:", err);
+    });
+  };
+} 
+
+
+
+
+
+
+
+
+
+
 
 
 
