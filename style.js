@@ -13,7 +13,6 @@ for (let i = 0; i < hearts.length; i++) {
 
 
 // call button alert 
-
 document.getElementById('nationalServiceBtn').onclick = function (){
     alert('📞 Calling National Emergency Service 999...');
 }
@@ -25,7 +24,7 @@ document.getElementById('fireServiceBtn').onclick = function (){
 }
 document.getElementById('ambulanceServiceBtn').onclick = function (){
     alert('📞 Calling Ambulance Service 1994-999999...');
-}
+} 
 document.getElementById('womenChildBtn').onclick = function (){
     alert('📞 Calling Women & Child Helpline 109...');
 }
@@ -40,7 +39,7 @@ document.getElementById('bracBtn').onclick = function (){
 }
 document.getElementById('RailwayBtn').onclick = function (){
     alert('📞 Calling Bangladesh Railway Helpline 163...');
-}
+} 
 
 
 // coin cost function
@@ -66,21 +65,7 @@ for (let i = 0; i < callButtons.length; i++) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
  // copy count function
-
 const copyButtons = document.getElementsByClassName("copyBtn"); 
 const copyNumberCount = document.getElementById("copyNumber"); 
 
@@ -96,7 +81,7 @@ for (let i = 0; i < copyButtons.length; i++) {
     
     alert("The number has been copied: " + numberText);
     navigator.clipboard.writeText(numberText).then(function() {
-      console.log("Copied successfully!");
+      console.log("Number copied");
     }).catch(function(err) {
       console.log("Failed to copy:", err);
     });
@@ -104,17 +89,51 @@ for (let i = 0; i < copyButtons.length; i++) {
 } 
 
 
+//call history function
+let coin = 100; 
+const coindisplay = document.getElementById("callCoin");
+coinDisplay.innerText = coin;
 
+const callbuttons = document.getElementsByClassName("callBtn");
+const historyContainer = document.querySelector(".history-container");
 
+for (let i = 0; i < callButtons.length; i++) {
+  const btn = callButtons[i];
+  const originalClick = btn.onclick;
 
+  btn.onclick = function () {
+    if (coin >= 20) {
+      if (typeof originalClick ==="function") {
+        originalClick();
+      }
 
+      coin -= 20;
+      coinDisplay.innerText = coin;
+      const card = btn.closest(".card");
+      const serviceName = card.querySelector(".card-title").innerText;
+      const serviceNumber = card.querySelector(".card-number").innerText;
+      
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
 
+      const newHistory = document.createElement("div");
+      newHistory.className = "bg-[#fafafa] w-auto h-auto p-4 m-5 rounded-lg flex justify-between";
+      newHistory.innerHTML = `
+        <div class="left">
+            <h2 class="font-semibold pb-1">${serviceName}</h2>
+            <h2 class="text-[#8f8f8f]">${serviceNumber}</h2>
+        </div>
+       <div class="right text-sm text-gray-500 whitespace-nowrap">
+            ${timeString}
+       </div> `;
+      historyContainer.appendChild(newHistory);
 
+    } else {
+      alert("❌ You do not have enough coins!\nYou need at least 20 coins to make a call.");
+    }
+  };
+}
 
-
-
-
-
-
+// clear button function
 
 
