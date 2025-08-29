@@ -9,7 +9,7 @@ for (let i = 0; i < hearts.length; i++) {
     count++; 
     heartNumber.innerText = count; 
   };
-}
+} 
 
 
 // call button alert 

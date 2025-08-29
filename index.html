@@ -14,17 +14,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
       integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer"/>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>Emergency-Hotline</title>
   </head>
   <body>
+
+
     <!-- navbar section -->
+
     <nav>
-      <div class="m-3 flex flex-col md:flex-row justify-between items-center">
-        <!-- left side -->
-        <div class="flex gap-3 pl-4 md:pl-[60px] items-center mb-3 md:mb-0">
+      <div class="m-2 sm:m-3 flex flex-col sm:flex-row justify-between items-center">
+        
+        <div class="flex gap-2 sm:gap-3 pl-2 sm:pl-4 md:pl-[60px] items-center mb-2 sm:mb-3 md:mb-0">
           <img src="assets/logo.png" alt="" class="w-12 md:w-[60px]" />
           <h2
             class="text-[#006748] text-lg md:text-2xl font-bold leading-tight"
@@ -33,22 +35,14 @@
             Service
           </h2>
         </div>
-        <!-- right side -->
+        
         <div class="pr-4 md:pr-[60px] flex gap-3 md:gap-5">
-
-
-
-
-
-<button id="mainHeart" class="rounded-3xl w-20 md:w-[100px] bg-[#ecfff0]">
-  <div class="flex justify-center items-center gap-2 md:gap-3">
-    <p id="heartNumber" class="font-bold">0</p>
-    <span><img src="assets/heart.png" alt="" class="w-5 md:w-[25px]" /></span>
-  </div>
-</button>
-
-
-
+            <button id="mainHeart" class="rounded-3xl w-20 md:w-[100px] bg-[#ecfff0]">
+                <div class="flex justify-center items-center gap-2 md:gap-3">
+                    <p id="heartNumber" class="font-bold">0</p>
+                    <span><img src="assets/heart.png" alt="" class="w-5 md:w-[25px]" /></span>
+                </div>
+            </button>
           <button class="rounded-3xl w-20 md:w-[100px] bg-[#ecfff0]">
             <div class="flex justify-center items-center gap-2 md:gap-3">
               <p class="font-bold" id="callCoin">100</p>
@@ -63,6 +57,8 @@
       </div>
     </nav>
 
+
+
     <!-- hero section -->
     <div
       class="w-full h-56 md:h-[300px] bg-gradient-to-r from-[#013123] via-[#006747] to-[#013223] flex flex-col justify-center items-center px-4">
@@ -70,33 +66,19 @@
       <h2 class="text-white text-lg md:text-2xl font-bold mb-2 text-center">
         Emergency Service Directory
       </h2>
-      <div class="flex justify-center text-center gap-1">
-        <p
-          class="text-white max-w-xs md:max-w-xl text-sm md:text-base text-center">
-          Government Emergency Services at Your Fingertip -
-        </p>
-        <p class="text-white max-w-xs md:max-w-xl text-sm md:text-base text-center">
-          A Project by Government of the People's Republic of Bangladesh
-        </p>
-      </div>
+        <div class="flex flex-col sm:flex-row justify-center text-center gap-0 sm:gap-1">
+             <p class="text-white max-w-xs sm:max-w-sm md:max-w-xl text-xs sm:text-sm md:text-base text-center">Government Emergency Services at Your Fingertip - </p>
+             <p class="text-white max-w-xs sm:max-w-sm md:max-w-xl text-xs sm:text-sm md:text-base text-center">A Project by Government of the People's Republic of Bangladesh</p>
+        </div>
     </div>
+
 
     <!-- main section -->
 
     <main class="bg-[#f5fff6]">
-      <section
-        id="contact-container"
-        class="w-11/12 mx-auto py-10 grid grid-cols-1 sm:grid-cols-12 gap-8">
-        <!-- product part -->
-
-        <section id="contact-box" class="col-span-9">
-
-          <div class="card-items grid grid-cols-1 md:grid-cols-3 gap-5">
-
-
-
-
-
+      <section class="w-11/12 mx-auto py-6 sm:py-10 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-8">
+        <section id="contact-box" class="col-span-full sm:col-span-9">
+          <div class="card-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
             <div class="card bg-base-100 w-full shadow-md">
               <div
                 class="flex justify-between place-items-center px-[25px] pt-4">
@@ -125,9 +107,6 @@
                 </div>
               </div>
             </div>
-
-
-            
 
             <div class="card bg-base-100 w-full shadow-md">
               <div
@@ -160,8 +139,6 @@
               </div>
             </div>
 
-
-
             <div class="card bg-base-100 w-full shadow-md">
               <div
                 class="flex justify-between place-items-center px-[25px] pt-4"
@@ -182,31 +159,24 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">Fire</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="fireServiceBtn" 
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="fireServiceBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
               </div>
             </div>
-
-
-
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/ambulance.png"
                     alt=""
-                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"
-                  />
+                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"/>
                 </div>
                 <i class="heartIcon fa-regular fa-heart text-[#5c5c5c] text-2xl"></i>
               </div>
@@ -217,13 +187,11 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">Health</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="ambulanceServiceBtn"
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="ambulanceServiceBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
@@ -234,14 +202,12 @@
 
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/emergency.png"
                     alt=""
-                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"
-                  />
+                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"/>
                 </div>
                 <i class="heartIcon fa-regular fa-heart text-[#5c5c5c] text-2xl"></i>
               </div>
@@ -252,25 +218,20 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">Help</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="womenChildBtn"
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="womenChildBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
               </div>
             </div>
 
-
-
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/emergency.png"
@@ -287,32 +248,25 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">Govt.</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="antiCorruptionBtn"
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="antiCorruptionBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
               </div>
             </div>
 
-
-
-
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/emergency.png"
                     alt=""
-                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"
-                  />
+                    class="w-[60px] bg-[#ffe3e2] p-3 rounded-2xl"/>
                 </div>
                 <i class="heartIcon fa-regular fa-heart text-[#5c5c5c] text-2xl"></i>
               </div>
@@ -323,27 +277,20 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">Electricity</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="electricityOutageBtn"
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="electricityOutageBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
               </div>
             </div>
 
-
-
-
-
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/brac.png"
@@ -360,13 +307,11 @@
                 <div class="badge text-[#8f8f8f] bg-[#f2f2f2]">NGO</div>
                 <div class="card-actions justify-center gap-4 pt-3">
                   <button
-                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId"
-                  >
+                    class="copyBtn badge badge-outline text-[#8f8f8f] w-[150px] h-[35px] bg-white hover:bg-[#b8c3bc] transition-colors duration-300" id="copyId">
                     <i class="fa-regular fa-copy"></i> Copy
                   </button>
                   <button
-                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="bracBtn"
-                  >
+                    class="callBtn badge badge-outline text-white w-[150px] h-[35px] bg-[#00a63e] hover:bg-[#b8c3bc] transition-colors duration-300" id="bracBtn">
                     <i class="fa-solid fa-phone"></i> Call
                   </button>
                 </div>
@@ -379,14 +324,12 @@
 
             <div class="card bg-base-100 w-full shadow-md">
               <div
-                class="flex justify-between place-items-center px-[25px] pt-4"
-              >
+                class="flex justify-between place-items-center px-[25px] pt-4">
                 <div>
                   <img
                     src="assets/Bangladesh-Railway.png"
                     alt=""
-                    class="w-[60px] bg-[#dfefff] p-3 rounded-2xl"
-                  />
+                    class="w-[60px] bg-[#dfefff] p-3 rounded-2xl"/>
                 </div>
                 <i class="heartIcon fa-regular fa-heart text-[#5c5c5c] text-2xl"></i>
               </div>
@@ -408,47 +351,28 @@
               </div>
             </div>
           </div>
-
-
-
         </section>
 
+        
         <!-- aside part -->
 
-        <aside id="cart-box" class="bg-white rounded-xl shadow-md col-span-1 sm:col-span-3 w-auto">
+       <aside id="cart-box" class="bg-white rounded-xl shadow-md col-span-full sm:col-span-3 w-full max-w-full">
 
-
-          <div class="flex justify-around items-center mt-3">
-            <div class="text-[20px] flex justify-center items-center gap-2">
-              <i class="fa-regular fa-clock text-[#8f8f8f]"></i>
-              <h3>Call History</h3>
-            </div>
-            <button
-              class="bg-[#00a63e] hover:bg-[#008c34] text-white rounded-3xl w-24 md:w-[120px] h-10 md:h-[45px] text-sm md:text-base transition-colors duration-300" id="clearBtn">Clear
-            </button>
-          </div>
-
-
-
-          <div class="history-container">
-            <div>
-
-                <!-- <div class="bg-[#fafafa] w-auto h-auto p-4 m-5 rounded-lg">
-                    <div class="left">
-                        <h2 class="font-semibold pb-2">Fire Service Number</h2>
-                        <h2 class="text-[#8f8f8f]">999</h2>
-                    </div>
-
-                    <div class="right">
-
-                    </div>
-                </div> -->
-
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-3 px-4 gap-2">
+                <div class="text-[18px] flex justify-center items-center gap-2">
+                    <i class="fa-regular fa-clock text-[#8f8f8f]"></i>
+                    <h3 class="text-base sm:text-lg">Call History</h3>
+                </div>
+                <button
+                    class="bg-[#00a63e] hover:bg-[#008c34] text-white rounded-3xl w-40 sm:w-24 md:w-[120px] h-10 md:h-[45px] text-sm md:text-base transition-colors duration-300 mt-2 sm:mt-0" id="clearBtn">Clear
+                </button>
             </div>
 
-          </div>
-
-
+            <div class="history-container px-4 pb-4">
+                <div>
+                    <!-- history cards -->
+                </div>
+            </div> 
 
         </aside>
       </section>
