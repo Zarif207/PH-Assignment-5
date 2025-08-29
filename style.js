@@ -4,8 +4,8 @@ const heartNumber = document.getElementById("heartNumber");
 
 let count = 0; 
 
-for (let i = 0; i < hearts.length; i++) {
-  hearts[i].onclick = function(){
+for (let i = 0; i < hearts.length; i++){
+  hearts[i].onclick =function(){
     count++; 
     heartNumber.innerText = count; 
   };
@@ -47,18 +47,18 @@ let coins = 100;
 const coinDisplay = document.getElementById("callCoin");
 const callButtons = document.getElementsByClassName("callBtn");
 
-for (let i = 0; i < callButtons.length; i++) {
+for (let i = 0; i < callButtons.length; i++){
   const btn = callButtons[i];
   const originalClick = btn.onclick;
 
   btn.onclick = function (){
-    if (coins >= 20) {
-      if (typeof originalClick === "function") {
+    if (coins >= 20){
+      if (typeof originalClick === "function"){
         originalClick();
       }
       coins -= 20;
       coinDisplay.innerText = coins;
-    } else {
+    } else{
       alert("❌ You do not have enough coins! \n You will need at least 20 coins to make call.");
     }
   };
@@ -71,7 +71,7 @@ const copyNumberCount = document.getElementById("copyNumber");
 
 let num = 0; 
 
-for (let i = 0; i < copyButtons.length; i++) {
+for (let i = 0; i < copyButtons.length; i++){
   copyButtons[i].onclick = function(){
     num++; 
     copyNumberCount.innerText = num + ' Copy'; 
@@ -80,9 +80,9 @@ for (let i = 0; i < copyButtons.length; i++) {
     const numberText = card.querySelector(".card-number").innerText; 
     
     alert("The number has been copied: " + numberText);
-    navigator.clipboard.writeText(numberText).then(function() {
+    navigator.clipboard.writeText(numberText).then(function(){
       console.log("Number copied");
-    }).catch(function(err) {
+    }).catch(function(err){
       console.log("Failed to copy:", err);
     });
   };
@@ -97,13 +97,13 @@ coinDisplay.innerText = coin;
 const callbuttons = document.getElementsByClassName("callBtn");
 const historyContainer = document.querySelector(".history-container");
 
-for (let i = 0; i < callButtons.length; i++) {
+for (let i = 0; i < callButtons.length; i++){
   const btn = callButtons[i];
   const originalClick = btn.onclick;
 
   btn.onclick = function () {
     if (coin >= 20) {
-      if (typeof originalClick ==="function") {
+      if (typeof originalClick ==="function"){
         originalClick();
       }
 
@@ -133,6 +133,7 @@ for (let i = 0; i < callButtons.length; i++) {
     }
   };
 }
+
 
 // clear button function
 const clearBtn = document.getElementById("clearBtn");
