@@ -112,7 +112,7 @@ for (let i = 0; i < callButtons.length; i++) {
       const card = btn.closest(".card");
       const serviceName = card.querySelector(".card-title").innerText;
       const serviceNumber = card.querySelector(".card-number").innerText;
-      
+
       const now = new Date();
       const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
 
@@ -135,5 +135,8 @@ for (let i = 0; i < callButtons.length; i++) {
 }
 
 // clear button function
+const clearBtn = document.getElementById("clearBtn");
 
-
+clearBtn.addEventListener("click", function () {
+  historyContainer.innerHTML = "";
+});
